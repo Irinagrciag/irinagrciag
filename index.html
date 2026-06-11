@@ -1,34 +1,44 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio - Irina</title>
+    <title>Irina | Portfolio</title>
+    <!-- Importamos la fuente DM Sans para que quede muy aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>¡Hola! Soy Irina</h1>
-        <p>Desarrolladora / Diseñadora / Entusiasta de la tecnología</p>
+    <!-- Menú de Navegación -->
+    <nav class="navbar">
+        <div class="logo">Irina.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inici</a></li>
+            <li><a href="sobre-mi.html">Sobre mi</a></li>
+            <!-- Menú Desplegable de Projectes -->
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Projectes ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="fotografia.html">Fotografia</a></li>
+                    <li><a href="xarxes-socials.html">Xarxes Socials</a></li>
+                    <li><a href="video-disseny.html">Vídeo i Disseny Gràfic</a></li>
+                </ul>
+            </li>
+            <li><a href="serveis.html">Serveis</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido de la Página de Inicio -->
+    <header class="hero">
+        <h1>Benvinguda al meu espai creatiu</h1>
+        <p>Explora els meus projectes i el meu treball professional.</p>
     </header>
 
-    <section id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>¡Bienvenido a mi portfolio! Aquí puedes escribir una breve descripción sobre quién eres, qué te apasiona y cuáles son tus habilidades principales.</p>
-    </section>
-
-    <section id="proyectos">
-        <h2>Mis Proyectos</h2>
-        <div class="proyecto-card">
-            <h3>Proyecto 1</h3>
-            <p>Descripción corta de lo que hiciste en este proyecto y qué tecnologías usaste.</p>
-            <a href="#">Ver proyecto</a>
-        </div>
-    </section>
-
     <footer>
-        <p>Contacto: tu-email@email.com | <a href="https://github.com/irinagrcia">GitHub</a></p>
+        <p>© 2026 Irina. Fet amb ♡</p>
     </footer>
 
 </body>
