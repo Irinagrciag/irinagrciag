@@ -46,28 +46,4 @@ body {
 .dropdown:hover .dropdown-content, .dropdown:hover::before { display: block; }
 
 /* ==========================================
-   ESTRUCTURA EDITORIAL & ANIMACIONS
-   ========================================== */
-.contenedor-art { max-width: 950px; margin: 5rem auto; padding: 0 2rem; }
-.numero { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: #a1a1a6; margin-bottom: 1.5rem; }
-.seccion-manifiesto { margin-bottom: 6rem; }
-.frase-impacto { font-size: 2.2rem; font-weight: 500; letter-spacing: -1px; line-height: 1.4; margin-bottom: 2.5rem; color: #111111; }
-.texto-columna { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; font-size: 1.05rem; color: #444444; }
-
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-.animacion-entrada { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-.animacion-entrada .seccion-manifiesto { margin-bottom: 2.5rem; }
-.titulo-subseccion { font-size: 1.2rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #1a1a1a; margin-bottom: 2rem; border-bottom: 1px solid #eae9e6; padding-bottom: 0.5rem; }
-
-/* ==========================================
-   GRAELLES & TARGETES (PORTADA + SUBPÀGINES)
-   ========================================== */
-.enlace-proyecto { text-decoration: none; color: inherit; display: block; }
-
-/* Portada d'Inici (2 columnes) i Xarxes/Vídeos (3 columnes) */
-.cuadricula-artistica { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3.5rem 2.5rem; margin-top: 2rem; }
-.graella-videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
-
-.tarjeta-foto, .tarjeta-audiovisual { display: flex; flex-direction: column; }
-
-/* Contenidors visuals (Im
+   EST
