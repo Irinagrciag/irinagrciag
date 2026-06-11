@@ -1,8 +1,6 @@
 /* MENÚ DESPLEGABLE (DROPDOWN) */
 .dropdown {
-    position: relative;
-    /* Afegim una mica de padding a sota del botó perquè el camí del ratolí estigui cobert */
-    padding-bottom: 10px; 
+    position: relative; /* Eliminem el padding-bottom d'aquí perquè no desvii el menú */
 }
 
 .dropdown-content {
@@ -15,7 +13,7 @@
     padding: 0.6rem 0;
     list-style: none;
     
-    /* SOLUCIÓ: Neix just on acaba el padding del pare, sense deixar buits */
+    /* Neix exactament al límit inferior del text */
     top: 100%; 
     left: 50%;
     transform: translateX(-50%);
@@ -23,18 +21,19 @@
     border: 1px solid #eee;
 }
 
-/* Això crea un pont invisible que uneix el botó amb el menú */
+/* El pont invisible definitiu: neix a dalt i fa de connector sense moure res */
 .dropdown::before {
     content: "";
     position: absolute;
-    top: 100%;
+    top: 50%; /* Comença una mica més amunt, des del mig del text */
     left: 0;
     width: 100%;
-    height: 15px; /* Cobreix qualsevol espai buit */
+    height: 40px; /* Alçada suficient per unir el text i el bloc blanc de sota */
     display: none;
+    z-index: 99; /* Es posa just per sota del menú però per sobre de la barra */
 }
 
-/* Quan fem hover, es mostra el menú i també el pont invisible */
+/* En fer hover s'activen tant el menú com el pont protector */
 .dropdown:hover .dropdown-content,
 .dropdown:hover::before {
     display: block;
