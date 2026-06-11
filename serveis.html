@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serveis | Irina</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Serveis | Irina Garcia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- HERO DE SUBPÀGINA -->
     <header class="hero-artistico subpagina">
         <div class="hero-centro">
-            <span class="tagline">QUÈ OFEREIXO</span>
+            <span class="tagline">COM PUC AJUDAR-TE</span>
             <h1>SERVEIS</h1>
+            <p class="subtitulo">Solucions creatives • Direcció d'art • Comunicació visual</p>
         </div>
+
         <nav class="navbar-artistica">
             <ul class="nav-links">
                 <li><a href="index.html">Inici</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Projectes ▾</a>
+                    <a href="#" class="dropbtn">Projectes <span class="flecha">▾</span></a>
                     <ul class="dropdown-content">
                         <li><a href="fotografia.html">Fotografia</a></li>
                         <li><a href="xarxes-socials.html">Xarxes Socials</a></li>
@@ -30,12 +36,105 @@
             </ul>
         </nav>
     </header>
-    <main class="contenedor-art">
-        <p class="numero">04 / COM PODEM TREBALLAR JUNTS</p>
-        <div class="cuadricula-artistica">
-            <div class="caja-imagen-placeholder" style="height: 200px;">CREACIÓ DE CONTINGUT & UGC</div>
-            <div class="caja-imagen-placeholder" style="height: 200px;">DIRECCIÓ D'ART & DISSENY</div>
-        </div>
+
+    <main class="contenedor-art animacion-entrada">
+        <!-- INTRODUCCIÓ DE LA SECCIÓ -->
+        <section class="seccion-manifiesto">
+            <p class="numero">00 / SERVICES</p>
+            <h2 class="frase-impacto">«Transformo conceptes en narratives i estètica visual de marca.»</h2>
+            <div class="texto-columna">
+                <p>Treballo colze a colze amb marques i projectes per conceptualitzar la seva essència i traduir-la en contingut d'alt valor. El meu objectiu és que la teva comunicació digital no només es vegi bé, sinó que connecti de veritat amb el teu públic.</p>
+                <p>A sota trobaràs els serveis principals que ofereixo. Cada proposta es personalitza segons les necessitats i objectius de cada marca.</p>
+            </div>
+        </section>
+
+        <!-- LLISTAT DE SERVEIS -->
+        <section class="seccion-lista-serveis">
+            <div class="graella-serveis">
+                
+                <!-- Servei 1: Fotografia -->
+                <div class="tarjeta-servicio">
+                    <div class="header-servicio">
+                        <span class="numero-servicio">01</span>
+                        <h3>Fotografia</h3>
+                    </div>
+                    <p>Narrativa visual a través de la llum i el color. Especialitzada en creació d'imatges corporatives, contingut gastronòmic, sessions editorials i reportatges de marca amb un estil net, cuidat i atemporal.</p>
+                    <ul class="detalles-servicio">
+                        <li>• Direcció de fotografia</li>
+                        <li>• Gastronomia i producte</li>
+                        <li>• Retrat corporatiu / Editorial</li>
+                        <li>• Retoc digital i colormetria</li>
+                    </ul>
+                </div>
+
+                <!-- Servei 2: Creació de contingut per a xarxes -->
+                <div class="tarjeta-servicio">
+                    <div class="header-servicio">
+                        <span class="numero-servicio">02</span>
+                        <h3>Creació de contingut per a xarxes</h3>
+                    </div>
+                    <p>Conceptualització i execució d'estratègies digitals. Desenvolupo l'imaginari visual per a marques en format vertical (Reels, TikTok) per millorar la presència digital, cuidar l'estètica del *feed* i augmentar l'abast orgànic.</p>
+                    <ul class="detalles-servicio">
+                        <li>• Grid Curation (Estructura del feed)</li>
+                        <li>• Contingut vertical diari (Reels / TikTok)</li>
+                        <li>• Estratègia i curació de tendències</li>
+                        <li>• Copys i guionització de contingut</li>
+                    </ul>
+                </div>
+
+                <!-- Servei 3: Vídeo -->
+                <div class="tarjeta-servicio">
+                    <div class="header-servicio">
+                        <span class="numero-servicio">03</span>
+                        <h3>Vídeo</h3>
+                    </div>
+                    <p>Producció audiovisual enfocada en el moviment i el dinamisme. Des de la gravació d'esdeveniments, *aftermovies*, vídeos corporatius en format horitzontal, fins a la postproducció i l'edició de transicions cuidades.</p>
+                    <ul class="detalles-servicio">
+                        <li>• Gravació de vídeo en alta definició</li>
+                        <li>• Aftermovies i contingut per a esdeveniments</li>
+                        <li>• Edició i postproducció de vídeo</li>
+                        <li>• Transicions musicals i disseny de so</li>
+                    </ul>
+                </div>
+
+                <!-- Servei 4: Disseny Gràfic -->
+                <div class="tarjeta-servicio">
+                    <div class="header-servicio">
+                        <span class="numero-servicio">04</span>
+                        <h3>Disseny Gràfic</h3>
+                    </div>
+                    <p>Creació de peces gràfiques tant digitals com impreses. Desenvolupament d'identitats visuals coherents, maquetació d'elements de marca, disseny per a campanyes publicitàries i gràfics personalitzats per a xarxes socials.</p>
+                    <ul class="detalles-servicio">
+                        <li>• Identitat visual de marca (Logotips, colors, tipografies)</li>
+                        <li>• Disseny de cartelleria i papereria</li>
+                        <li>• Maquetació de catàlegs i dossiers de premsa</li>
+                        <li>• Plantilles i assets per a xarxes socials</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓ DE CONTACTE INTEGRADA -->
+        <section class="contacto-serveis">
+            <div class="bloque-cta">
+                <h2>Tens un projecte en ment?</h2>
+                <p>Si vols que treballem junts o necessites un pressupost a mida, pots escriure'm directament.</p>
+                <a href="mailto:hola@irinagarcia.com" class="boton-contacto">hola@irinagarcia.com</a>
+            </div>
+        </section>
     </main>
+
+    <footer class="footer-artistico">
+        <div class="footer-contenido">
+            <p>&copy; 2026 Irina Garcia. Tots els drets reservats.</p>
+            <div class="redes-sociales">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Behance</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
