@@ -1,135 +1,363 @@
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xarxes Socials | Irina Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* CONFIGURACIÓN GENERAL */
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbfbfa;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
 
-    <header class="hero-artistico subpagina">
-        <div class="hero-centro">
-            <span class="tagline">PORTFOLIO CREATIU</span>
-            <h1>XARXES SOCIALS</h1>
-            <p class="subtitulo">Creació de contingut i formats verticals</p>
-        </div>
-        <nav class="navbar-artistica">
-            <ul class="nav-links">
-                <li><a href="index.html">Inici</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn active">Projectes <span class="flecha">▾</span></a>
-                    <ul class="dropdown-content">
-                        <li><a href="fotografia.html">Fotografia</a></li>
-                        <li><a href="xarxes-socials.html">Xarxes Socials</a></li>
-                        <li><a href="video.html">Vídeo</a></li>
-                        <li><a href="disseny-grafic.html">Disseny Gràfic</a></li>
-                    </ul>
-                </li>
-                <li><a href="sobre-mi.html">Sobre mi</a></li>
-                <li><a href="serveis.html">Serveis</a></li>
-            </ul>
-        </nav>
-    </header>
+/* RECTÁNGULO SUPERIOR MÁS CORTO (45vh en portada, 30vh en subpáginas) */
+.hero-artistico {
+    position: relative;
+    background-color: #1a1a1d;
+    color: #ffffff;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
 
-    <main class="contenedor-art animacion-entrada">
-        
-        <section class="seccion-manifiesto">
-            <p class="numero">03 / CREACIÓ DIGITAL</p>
-            <h2 class="frase-impacto">«Narrativa visual en format vertical»</h2>
-        </section>
+.hero-artistico.subpagina {
+    height: 40vh; /* Mantinc el teu ajust adaptat */
+}
 
-        <!-- SECCIÓ 1: PUBLICACIONS -->
-        <section class="subseccion-portfolio">
-            <h3 class="titulo-subseccion">Publicacions</h3>
-            <div class="cuadricula-artistica">
-                <div class="tarjeta-foto">
-                    <div class="caja-imagen-placeholder">
-                        <span>IMATGE @llevataps</span>
-                        <div class="capa-oscura"><span>VEURE POST</span></div>
-                    </div>
-                    <div class="info-foto">
-                        <h3>Estratègia de Feed</h3>
-                        <p>Fotografia de producte i composició de graella harmoniosa.</p>
-                    </div>
-                </div>
-                <div class="tarjeta-foto">
-                    <div class="caja-imagen-placeholder">
-                        <span>IMATGE @kareba</span>
-                        <div class="capa-oscura"><span>VEURE POST</span></div>
-                    </div>
-                    <div class="info-foto">
-                        <h3>Direcció de l'Estatge</h3>
-                        <p>Curatoris visuals de marca i disseny gràfic integrat al carrousel.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+.hero-centro {
+    margin: auto 0;
+    text-align: center;
+    padding: 0 1rem;
+}
 
-        <!-- SECCIÓ 2: REELS -->
-        <section class="subseccion-portfolio" style="margin-top: 5rem;">
-            <h3 class="titulo-subseccion">Reels</h3>
-            <div class="graella-videos">
-                <div class="tarjeta-audiovisual">
-                    <div class="contenedor-video">
-                        <video autoplay loop muted playsinline src="video/llevataps.mp4"></video>
-                        <div class="capa-oscura"><span>VEURE PROJECTE</span></div>
-                    </div>
-                    <h4>@llevataps_sabadell</h4>
-                    <p>Creació de contingut gastronòmic, fotografia de producte i gestió de comunitat.</p>
-                </div>
-                <div class="tarjeta-audiovisual">
-                    <div class="contenedor-video">
-                        <video autoplay loop muted playsinline src="video/activatt.mp4"></video>
-                        <div class="capa-oscura"><span>VEURE PROJECTE</span></div>
-                    </div>
-                    <h4>@activatt_</h4>
-                    <p>Estratègia digital, vídeos dinàmics d'entrenament i disseny de publicacions d'alt impacte.</p>
-                </div>
-                <div class="tarjeta-audiovisual">
-                    <div class="contenedor-video">
-                        <video autoplay loop muted playsinline src="video/kareba.mp4"></video>
-                        <div class="capa-oscura"><span>VEURE PROJECTE</span></div>
-                    </div>
-                    <h4>@kareba.travel</h4>
-                    <p>Creació de contingut de viatges, format narratiu i gestió de comunitat.</p>
-                </div>
-            </div>
-        </section>
+.tagline {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #8f8f93;
+    display: block;
+    margin-bottom: 0.5rem;
+}
 
-        <!-- SECCIÓ 3: HISTÒRIES D'INSTAGRAM -->
-        <section class="subseccion-portfolio" style="margin-top: 5rem;">
-            <h3 class="titulo-subseccion">Històries d'Instagram</h3>
-            <div class="contenedor-historias-flex">
-                <div class="item-historia">
-                    <div class="circulo-historia">
-                        <img src="img/historia1.jpg" alt="Història 1">
-                    </div>
-                    <span>Gastronomia</span>
-                </div>
-                <div class="item-historia">
-                    <div class="circulo-historia">
-                        <img src="img/historia2.jpg" alt="Història 2">
-                    </div>
-                    <span>Lifestyle</span>
-                </div>
-                <div class="item-historia">
-                    <div class="circulo-historia">
-                        <img src="img/historia3.jpg" alt="Història 3">
-                    </div>
-                    <span>Viatges</span>
-                </div>
-            </div>
-        </section>
+.hero-artistico h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin: 0;
+    line-height: 1.1;
+}
 
-    </main>
+.subtitulo {
+    font-size: 1rem;
+    color: #d1d1d6;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 0.8rem;
+}
 
-    <footer class="footer-artistico">
-        <p>&copy; 2026 Irina Garcia. Tots els drets reservats.</p>
-    </footer>
+/* MENÚ INTEGRADO EN LA BASE DEL RECTÁNGULO */
+.navbar-artistica {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1rem 0;
+}
 
-</body>
-</html>
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a1a1a6;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ffffff;
+}
+
+.flecha {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* MENÚ DESPLEGABLE (DROPDOWN) */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 220px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    padding: 0.6rem 0;
+    list-style: none;
+    margin-top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    border: 1px solid #eee;
+}
+
+.dropdown-content li a {
+    color: #333333 !important;
+    padding: 0.7rem 1.5rem;
+    display: block;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f7f7f9;
+    color: #000000 !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* SECCIONES EDITORIALES */
+.contenedor-art {
+    max-width: 950px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.numero {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #a1a1a6;
+    margin-bottom: 1.5rem;
+}
+
+.seccion-manifiesto {
+    margin-bottom: 6rem;
+}
+
+.frase-impacto {
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    margin-bottom: 2.5rem;
+    color: #111111;
+}
+
+.texto-columna {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    font-size: 1.05rem;
+    color: #444444;
+}
+
+.cuadricula-artistica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.caja-imagen-placeholder {
+    background-color: #eae9e6;
+    height: 350px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #888;
+    font-weight: 600;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.caja-imagen-placeholder:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.footer-artistico {
+    text-align: center;
+    padding: 4rem 2rem;
+    font-size: 0.85rem;
+    color: #888;
+    border-top: 1px solid #eae9e6;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   AFEGITS PER A LA PÀGINA DE XARXES
+   ========================================== */
+
+/* Títols separadors de les 3 seccions */
+.titulo-subseccion {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eae9e6;
+    padding-bottom: 0.5rem;
+}
+
+/* Format de les targetes del portfoli de fotos (Subsecció Publicacions) */
+.tarjeta-foto {
+    display: flex;
+    flex-direction: column;
+}
+.info-foto h3, .tarjeta-audiovisual h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1.2rem 0 0.3rem 0;
+    color: #111111;
+}
+.info-foto p, .tarjeta-audiovisual p {
+    font-size: 0.95rem;
+    color: #555555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Graella i vídeos 9:16 (Subsecció Reels) */
+.graella-videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.tarjeta-audiovisual {
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    background-color: #000;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.contenedor-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.contenedor-video:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+.contenedor-video:hover video {
+    transform: scale(1.04);
+}
+.capa-oscura {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; transition: opacity 0.3s ease;
+}
+.capa-oscura span {
+    color: #fff; font-size: 0.9rem; font-weight: 500; letter-spacing: 1px;
+    border: 1px solid #fff; padding: 0.6rem 1.2rem; border-radius: 40px;
+    transform: translateY(10px); transition: transform 0.4s ease;
+}
+.contenedor-video:hover .capa-oscura { opacity: 1; }
+.contenedor-video:hover .capa-oscura span { transform: translateY(0); }
+
+/* Secció Històries d'Instagram */
+.seccion-historias {
+    margin-top: 6rem;
+    border-top: 1px solid #eae9e6;
+    padding-top: 4rem;
+}
+.seccion-historias p {
+    font-size: 0.95rem;
+    color: #555555;
+    margin-bottom: 3rem;
+}
+.contenedor-historias-flex {
+    display: flex;
+    gap: 3.5rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.item-historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.circulo-historia {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 1px solid #a1a1a6;
+    padding: 4px;
+    background-color: #fbfbfa;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.circulo-historia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.item-historia span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+.item-historia:hover .circulo-historia {
+    transform: translateY(-4px) scale(1.03);
+    border-color: #1a1a1a;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.item-historia:hover span {
+    color: #666666;
+}
+
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================== */
+@media (max-width: 768px) {
+    .hero-artistico h1 { font-size: 2.8rem; }
+    .hero-artistico { height: 35vh; }
+    .texto-columna { grid-template-columns: 1fr; gap: 1.5rem; }
+    .cuadricula-artistica { grid-template-columns: 1fr; }
+    .graella-videos { grid-template-columns: 1fr; gap: 3rem; }
+    .nav-links { gap: 1.5rem; }
+    
+    .contenedor-historias-flex {
+        gap: 2rem;
+        justify-content: center;
+    }
+    .circulo-historia {
+        width: 80px;
+        height: 80px;
+    }
+}
