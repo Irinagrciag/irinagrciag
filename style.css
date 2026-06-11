@@ -35,3 +35,129 @@ body {
 
 /* MENÚ DESPLEGABLE (DROPDOWN) */
 .dropdown { position: relative; }
+.dropdown-content {
+    display: none; position: absolute; background-color: #ffffff; min-width: 220px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.08); border-radius: 8px; padding: 0.6rem 0;
+    list-style: none; top: 100%; left: 50%; transform: translateX(-50%); z-index: 100; border: 1px solid #eee;
+}
+.dropdown-content li a { color: #333333 !important; padding: 0.7rem 1.5rem; display: block; font-size: 0.9rem; text-align: left; }
+.dropdown-content li a:hover { background-color: #f7f7f9; color: #000000 !important; }
+.dropdown::before { content: ""; position: absolute; top: 50%; left: 0; width: 100%; height: 40px; display: none; z-index: 99; }
+.dropdown:hover .dropdown-content, .dropdown:hover::before { display: block; }
+
+/* ==========================================
+   ESTRUCTURA EDITORIAL & ANIMACIONS
+   ========================================== */
+.contenedor-art { max-width: 950px; margin: 5rem auto; padding: 0 2rem; }
+.numero { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: #a1a1a6; margin-bottom: 1.5rem; }
+.seccion-manifiesto { margin-bottom: 6rem; }
+.frase-impacto { font-size: 2.2rem; font-weight: 500; letter-spacing: -1px; line-height: 1.4; margin-bottom: 2.5rem; color: #111111; }
+.texto-columna { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; font-size: 1.05rem; color: #444444; }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.animacion-entrada { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animacion-entrada .seccion-manifiesto { margin-bottom: 2.5rem; }
+.titulo-subseccion { font-size: 1.2rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #1a1a1a; margin-bottom: 2rem; border-bottom: 1px solid #eae9e6; padding-bottom: 0.5rem; }
+
+/* ==========================================
+   GRAELLES & TARGETES
+   ========================================== */
+.enlace-proyecto { text-decoration: none; color: inherit; display: block; }
+.cuadricula-artistica { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3.5rem 2.5rem; margin-top: 2rem; }
+.graella-videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+.tarjeta-foto, .tarjeta-audiovisual { display: flex; flex-direction: column; }
+
+.caja-imagen-placeholder, .contenedor-video {
+    width: 100%; aspect-ratio: 4 / 3; background-color: #eeeae4; border-radius: 8px;
+    display: flex; justify-content: center; align-items: center; position: relative; overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease; cursor: pointer;
+}
+.contenedor-video { aspect-ratio: 9 / 16; background-color: #000; border-radius: 12px; }
+.contenedor-video video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+
+.tarjeta-foto:hover .caja-imagen-placeholder, .contenedor-video:hover { transform: translateY(-6px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+.contenedor-video:hover video { transform: scale(1.04); }
+
+.caja-imagen-placeholder span { font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; color: #7c7874; }
+.capa-oscura { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
+.capa-oscura span { color: #fff; font-size: 0.9rem; font-weight: 500; letter-spacing: 1px; border: 1px solid #fff; padding: 0.6rem 1.2rem; border-radius: 40px; transform: translateY(10px); transition: transform 0.4s ease; }
+.contenedor-video:hover .capa-oscura { opacity: 1; }
+.contenedor-video:hover .capa-oscura span { transform: translateY(0); }
+
+.info-foto h3, .tarjeta-audiovisual h4 { font-size: 1.2rem; font-weight: 600; margin: 1.2rem 0 0.3rem 0; color: #111111; }
+.info-foto p, .tarjeta-audiovisual p { font-size: 0.95rem; color: #555555; margin: 0; line-height: 1.5; }
+
+/* ==========================================
+   MÒDUL D'HISTÒRIES D'INSTAGRAM
+   ========================================== */
+.contenedor-historias-flex {
+    display: flex;
+    gap: 3.5rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.item-historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.circulo-historia {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 1px solid #a1a1a6;
+    padding: 4px;
+    background-color: #fbfbfa;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.circulo-historia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.item-historia span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.item-historia:hover .circulo-historia {
+    transform: translateY(-6px);
+    border-color: #1a1a1a;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+}
+
+.item-historia:hover span {
+    color: #666666;
+}
+
+/* ==========================================
+   FOOTER & RESPONSIVE (MÒBILS)
+   ========================================== */
+.footer-artistico { text-align: center; padding: 4rem 2rem; font-size: 0.85rem; color: #888; border-top: 1px solid #eae9e6; max-width: 950px; margin: 0 auto; }
+
+@media (max-width: 768px) {
+    .hero-artistico h1 { font-size: 2.8rem; }
+    .hero-artistico { height: 35vh; }
+    .texto-columna, .cuadricula-artistica, .graella-videos { grid-template-columns: 1fr; gap: 3rem; }
+    .nav-links { gap: 1.5rem; }
+    
+    .contenedor-historias-flex {
+        gap: 2rem;
+        justify-content: center;
+    }
+    .circulo-historia {
+        width: 80px;
+        height: 80px;
+    }
+}
