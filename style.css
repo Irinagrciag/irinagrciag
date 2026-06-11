@@ -18,6 +18,7 @@ body {
     background-color: #1a1a1d; color: #ffffff;
     height: 45vh;
     display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+    padding: 0;
 }
 .hero-artistico.subpagina { height: 30vh; }
 
@@ -32,7 +33,7 @@ body {
 .nav-links a:hover, .nav-links a.active { color: #ffffff; }
 .flecha { font-size: 0.8rem; color: #666; }
 
-/* MENÚ DESPLEGABLE (DROPDOWN) */
+/* MENÚ DESPLEGABLE (DROPDOWN) - ORIGINAL INTACTE */
 .dropdown { position: relative; }
 .dropdown-content {
     display: none; position: absolute; background-color: #ffffff; min-width: 220px;
@@ -64,50 +65,9 @@ body {
 .enlace-proyecto { text-decoration: none; color: inherit; display: block; }
 
 /* Portada d'Inici (2 columnes) i Xarxes/Vídeos (3 columnes) */
-.cuadricula-artistica { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3.5rem 2.5rem; }
+.cuadricula-artistica { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3.5rem 2.5rem; margin-top: 2rem; }
 .graella-videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
 
 .tarjeta-foto, .tarjeta-audiovisual { display: flex; flex-direction: column; }
 
-/* Contenidors visuals (Imatges i Vídeos) compartint el mateix comportament elegant */
-.caja-imagen-placeholder, .contenedor-video {
-    width: 100%; aspect-ratio: 4 / 3; background-color: #eeeae4; border-radius: 8px;
-    display: flex; justify-content: center; align-items: center; position: relative; overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease; cursor: pointer;
-}
-.contenedor-video { aspect-ratio: 9 / 16; background-color: #000; border-radius: 12px; }
-.contenedor-video video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-
-/* Efectes Hover unificats */
-.tarjeta-foto:hover .caja-imagen-placeholder, .contenedor-video:hover { transform: translateY(-6px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
-.contenedor-video:hover video { transform: scale(1.04); }
-
-/* Capa fosc i textos interiors */
-.caja-imagen-placeholder span { font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; color: #7c7874; }
-.capa-oscura { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
-.capa-oscura span { color: #fff; font-size: 0.9rem; font-weight: 500; letter-spacing: 1px; border: 1px solid #fff; padding: 0.6rem 1.2rem; border-radius: 40px; transform: translateY(10px); transition: transform 0.4s ease; }
-.contenedor-video:hover .capa-oscura { opacity: 1; }
-.contenedor-video:hover .capa-oscura span { transform: translateY(0); }
-
-/* Textos inferiors dels projectes */
-.info-foto h3, .tarjeta-audiovisual h4 { font-size: 1.2rem; font-weight: 600; margin: 1.2rem 0 0.3rem 0; color: #111111; }
-.info-foto p, .tarjeta-audiovisual p { font-size: 0.95rem; color: #555555; margin: 0; line-height: 1.5; }
-
-/* Estils de la pàgina de Vídeo (TFG) */
-.video-tfg { background-color: #111 !important; color: #fff !important; flex-direction: column; gap: 0.8rem; }
-.icono-play { font-size: 1.8rem; opacity: 0.7; transition: transform 0.3s ease; }
-.enlace-proyecto:hover .icono-play { transform: scale(1.2); }
-.tag-proyecto { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; color: #888; margin: 0.2rem 0 0.6rem 0; }
-.enllaç-youtube { display: inline-block; margin-top: 1rem; font-size: 0.9rem; font-weight: 600; color: #1a1a1a; text-decoration: none; border-bottom: 1px solid #1a1a1a; }
-
-/* ==========================================
-   FOOTER & RESPONSIVE (MÒBILS)
-   ========================================== */
-.footer-artistico { text-align: center; padding: 4rem 2rem; font-size: 0.85rem; color: #888; border-top: 1px solid #eae9e6; max-width: 950px; margin: 0 auto; }
-
-@media (max-width: 768px) {
-    .hero-artistico h1 { font-size: 2.8rem; }
-    .hero-artistico { height: 35vh; }
-    .texto-columna, .cuadricula-artistica, .graella-videos { grid-template-columns: 1fr; gap: 3rem; }
-    .nav-links { gap: 1.5rem; }
-}
+/* Contenidors visuals (Im
