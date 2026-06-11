@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irina | Portfolio</title>
-    <!-- Importamos la fuente DM Sans para que quede muy aesthetic -->
+    <title>Irina | Portfolio Creatiu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
@@ -12,33 +11,74 @@
 </head>
 <body>
 
-    <!-- Menú de Navegación -->
-    <nav class="navbar">
-        <div class="logo">Irina.</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Inici</a></li>
-            <li><a href="sobre-mi.html">Sobre mi</a></li>
-            <!-- Menú Desplegable de Projectes -->
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Projectes ▾</a>
-                <ul class="dropdown-content">
-                    <li><a href="fotografia.html">Fotografia</a></li>
-                    <li><a href="xarxes-socials.html">Xarxes Socials</a></li>
-                    <li><a href="video-disseny.html">Vídeo i Disseny Gràfic</a></li>
-                </ul>
-            </li>
-            <li><a href="serveis.html">Serveis</a></li>
-        </ul>
-    </nav>
+    <!-- BLOQUE SUPERIOR ARTÍSTICO (El rectángulo visual) -->
+    <header class="hero-artistico">
+        <div class="hero-centro">
+            <span class="tagline">PORTFOLIO CREATIU</span>
+            <h1>IRINA GARCIA</h1>
+            <p class="subtitulo">Fotografia • Xarxes Socials • Vídeo • Disseny</p>
+        </div>
 
-    <!-- Contenido de la Página de Inicio -->
-    <header class="hero">
-        <h1>Benvinguda al meu espai creatiu</h1>
-        <p>Explora els meus projectes i el meu treball professional.</p>
+        <!-- Menú integrado abajo del rectángulo -->
+        <nav class="navbar-artistica">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inici</a></li>
+                <li><a href="sobre-mi.html">Sobre mi</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Projectes <span class="flecha">▾</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="fotografia.html">Fotografia</a></li>
+                        <li><a href="xarxes-socials.html">Xarxes Socials</a></li>
+                        <li><a href="video-disseny.html">Vídeo i Disseny Gràfic</a></li>
+                    </ul>
+                </li>
+                <li><a href="serveis.html">Serveis</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <footer>
-        <p>© 2026 Irina. Fet amb ♡</p>
+    <!-- CUERPO DE LA PÁGINA (Estructura típica de portfolio editorial) -->
+    <main class="contenedor-art">
+        
+        <!-- Sección 1: Manifiesto / Introducción -->
+        <section class="seccion-manifiesto">
+            <p class="numero">01 / INTRODUCCIÓ</p>
+            <h2 class="frase-impacto">«Capturar l'essència a través de la lent, el disseny i l'estratègia digital.»</h2>
+            <div class="texto-columna">
+                <p>Soc l'Irina, creadora visual especialitzada a donar forma a idees a través de formats estètics i contemporanis. Entenc cada projecte com una peça única on la composició, el color i la narrativa s'uneixen per connectar amb les persones de manera autèntica.</p>
+                <p>La meva trajectòria es mou entre la sensibilitat de la fotografia de producte, el dinamisme del format vídeo i l'ordre estructural del disseny gràfic, ajudant a marques i projectes a brillar en l'ecosistema digital actual.</p>
+            </div>
+        </section>
+
+        <!-- Sección 2: Galería Destacada (Estructura típica visual) -->
+        <section class="seccion-destacats">
+            <p class="numero">02 / TREBALLS DESTACATS</p>
+            
+            <div class="cuadricula-artistica">
+                <!-- Tarjeta 1 -->
+                <div class="item-art">
+                    <div class="caja-imagen-placeholder">FOTOGRAFIA</div>
+                    <div class="info-item">
+                        <h3>Exploració Visual</h3>
+                        <p>Direcció d'art i llum</p>
+                    </div>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="item-art">
+                    <div class="caja-imagen-placeholder">DISSENY</div>
+                    <div class="info-item">
+                        <h3>Identitat de Marca</h3>
+                        <p>Minimalisme i composició</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER LIGERO -->
+    <footer class="footer-artistico">
+        <p>© 2026 Irina Garcia. Drets reservats.</p>
     </footer>
 
 </body>
