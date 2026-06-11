@@ -1,100 +1,8 @@
-/* CONFIGURACIÓN GENERAL */
-body {
-    font-family: 'DM Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fbfbfa;
-    color: #1a1a1a;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* RECTÁNGULO SUPERIOR MÁS CORTO (45vh en portada, 30vh en subpáginas) */
-.hero-artistico {
-    position: relative;
-    background-color: #1a1a1d;
-    color: #ffffff;
-    height: 45vh; /* Més curt i elegant */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-}
-
-.hero-artistico.subpagina {
-    height: 30vh; /* Estilitzat per a les subpàgines */
-}
-
-.hero-centro {
-    margin: auto 0;
-    text-align: center;
-    padding: 0 1rem;
-}
-
-.tagline {
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 4px;
-    color: #8f8f93;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.hero-artistico h1 {
-    font-size: 3.8rem;
-    font-weight: 800;
-    letter-spacing: -2px;
-    margin: 0;
-    line-height: 1.1;
-}
-
-.subtitulo {
-    font-size: 1rem;
-    color: #d1d1d6;
-    font-weight: 300;
-    letter-spacing: 1px;
-    margin-top: 0.8rem;
-}
-
-/* MENÚ INTEGRADO EN LA BASE DEL RECTÁNGULO */
-.navbar-artistica {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.02);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 1rem 0;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 3.5rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #a1a1a6;
-    font-weight: 500;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: #ffffff;
-}
-
-.flecha {
-    font-size: 0.8rem;
-    color: #666;
-}
-
-/* MENÚ DESPLEGABLE (DROPDOWN) - Arreglat perquè no es tanqui */
+/* MENÚ DESPLEGABLE (DROPDOWN) */
 .dropdown {
     position: relative;
+    /* Afegim una mica de padding a sota del botó perquè el camí del ratolí estigui cobert */
+    padding-bottom: 10px; 
 }
 
 .dropdown-content {
@@ -106,107 +14,28 @@ body {
     border-radius: 8px;
     padding: 0.6rem 0;
     list-style: none;
-    top: 100%; /* S'alinea just on acaba el text superior */
+    
+    /* SOLUCIÓ: Neix just on acaba el padding del pare, sense deixar buits */
+    top: 100%; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
     border: 1px solid #eee;
 }
 
-.dropdown-content li a {
-    color: #333333 !important;
-    padding: 0.7rem 1.5rem;
+/* Això crea un pont invisible que uneix el botó amb el menú */
+.dropdown::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 15px; /* Cobreix qualsevol espai buit */
+    display: none;
+}
+
+/* Quan fem hover, es mostra el menú i també el pont invisible */
+.dropdown:hover .dropdown-content,
+.dropdown:hover::before {
     display: block;
-    font-size: 0.9rem;
-    text-align: left;
-}
-
-.dropdown-content li a:hover {
-    background-color: #f7f7f9;
-    color: #000000 !important;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* SECCIONES EDITORIALES */
-.contenedor-art {
-    max-width: 950px;
-    margin: 5rem auto;
-    padding: 0 2rem;
-}
-
-.numero {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #a1a1a6;
-    margin-bottom: 1.5rem;
-}
-
-.seccion-manifiesto {
-    margin-bottom: 6rem;
-}
-
-.frase-impacto {
-    font-size: 2.2rem;
-    font-weight: 500;
-    letter-spacing: -1px;
-    line-height: 1.4;
-    margin-bottom: 2.5rem;
-    color: #111111;
-}
-
-.texto-columna {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    font-size: 1.05rem;
-    color: #444444;
-}
-
-.cuadricula-artistica {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin-top: 2rem;
-}
-
-.caja-imagen-placeholder {
-    background-color: #eae9e6;
-    height: 350px;
-    border-radius: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    color: #888;
-    font-weight: 600;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.caja-imagen-placeholder:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-}
-
-.footer-artistico {
-    text-align: center;
-    padding: 4rem 2rem;
-    font-size: 0.85rem;
-    color: #888;
-    border-top: 1px solid #eae9e6;
-    max-width: 950px;
-    margin: 0 auto;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .hero-artistico h1 { font-size: 2.8rem; }
-    .hero-artistico { height: 35vh; }
-    .texto-columna { grid-template-columns: 1fr; gap: 1.5rem; }
-    .cuadricula-artistica { grid-template-columns: 1fr; }
-    .nav-links { gap: 1.5rem; }
 }
