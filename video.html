@@ -1,87 +1,52 @@
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vídeo | Irina Garcia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<div class="graella-videos">
 
-    <!-- HERO DE SUBPÀGINA -->
-    <header class="hero-artistico subpagina">
-        <div class="hero-centro">
-            <span class="tagline">NARRATIVA AUDIOVISUAL</span>
-            <h1>VÍDEO</h1>
-            <p class="subtitulo">Documental • Postproducció • Direcció de fotografia • Edició</p>
-        </div>
-
-        <nav class="navbar-artistica">
-            <ul class="nav-links">
-                <li><a href="index.html">Inici</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Projectes <span class="flecha">▾</span></a>
-                    <ul class="dropdown-content">
-                        <li><a href="fotografia.html">Fotografia</a></li>
-                        <li><a href="xarxes-socials.html">Xarxes Socials</a></li>
-                        <li><a href="video.html" class="active">Vídeo</a></li>
-                        <li><a href="disseny-grafic.html">Disseny Gràfic</a></li>
-                    </ul>
-                </li>
-                <li><a href="sobre-mi.html">Sobre mi</a></li>
-                <li><a href="serveis.html">Serveis</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="contenedor-art animacion-entrada">
-        <!-- INTRODUCCIÓ DE LA SECCIÓ -->
-        <section class="seccion-manifiesto">
-            <p class="numero">03 / VIDEO PRODUCTION</p>
-            <h2 class="frase-impacto">«El moviment i el temps com a eina per connectar emocionalment.»</h2>
-            <div class="texto-columna">
-                <p>Entenc el vídeo com un llenç dinàmic on conflueixen la imatge, el ritme i el so. Em centro en projectes que busquen una estètica cinematogràfica i una narrativa profunda, cuidant cada tall, transició i intenció en el muntatge.</p>
-                <p>A sota pots trobar peces clau de la meva trajectòria audiovisual, incloent projectes d'investigació personal i treballs de caire documental.</p>
-            </div>
-        </section>
-
-        <!-- SUBSECCIÓ PROJECTES AUDIOVISUALS -->
-        <section class="seccion-proyectos-video">
-            <div class="cuadricula-artistica">
-                
-                <!-- Projecte: Treball de Final de Grau (TFG) -->
-                <div class="tarjeta-foto">
-                    <a href="https://youtu.be/5FZGSdFwBgU?si=aPTuS4TleV4AXnow" target="_blank" class="enlace-proyecto-video">
-                        <div class="caja-imagen-placeholder video-tfg">
-                            <span>REPRODUIR DOCUMENTAL</span>
-                            <div class="icono-play">▶</div>
-                        </div>
-                    </a>
-                    <div class="info-foto">
-                        <h3>Treball de Final de Grau</h3>
-                        <p class="tag-proyecto">Documental Autobiogràfic</p>
-                        <p>Projecte d'essència íntima i narrativa personal. Una peça audiovisual de reflexió interna on s'explora la identitat, el pas del temps i les vivències pròpies a través d'una acurada selecció d'arxius, veu en off i disseny sonor.</p>
-                        <a href="https://youtu.be/5FZGSdFwBgU?si=aPTuS4TleV4AXnow" target="_blank" class="enllaç-youtube">Mira'l a YouTube ↗</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer-artistico">
-        <div class="footer-contenido">
-            <p>&copy; 2026 Irina Garcia. Tots els drets reservats.</p>
-            <div class="redes-sociales">
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">Behance</a>
+    <!-- TARGETA 1: Llevataps Sabadell -->
+    <div class="tarjeta-audiovisual">
+        <div class="contenedor-video">
+            <video autoplay loop muted playsinline src="video/llevataps.mp4"></video>
+            <div class="capa-oscura">
+                <span>VEURE PROJECTE</span>
             </div>
         </div>
-    </footer>
+        <h4>@llevataps_sabadell</h4>
+        <p>Creació de contingut gastronòmic, fotografia de producte i gestió de comunitat.</p>
+    </div>
 
-</body>
-</html>
+    <!-- TARGETA 2: Activatt -->
+    <div class="tarjeta-audiovisual">
+        <div class="contenedor-video">
+            <video autoplay loop muted playsinline src="video/activatt.mp4"></video>
+            <div class="capa-oscura">
+                <span>VEURE PROJECTE</span>
+            </div>
+        </div>
+        <h4>@activatt_</h4>
+        <p>Estratègia digital, vídeos dinàmics d'entrenament i disseny de publicacions d'alt impacte.</p>
+    </div>
+
+    <!-- TARGETA 3: Kareba Travel -->
+    <div class="tarjeta-audiovisual">
+        <div class="contenedor-video">
+            <!-- Recorda comprovar si el fitxer es diu kareba.mp4 o kareba-travel.mp4 al teu ordinador -->
+            <video autoplay loop muted playsinline src="video/kareba.mp4"></video>
+            <div class="capa-oscura">
+                <span>VEURE PROJECTE</span>
+            </div>
+        </div>
+        <h4>@kareba.travel</h4>
+        <p>Creació de contingut de viatges, format narratiu i gestió de comunitat.</p>
+    </div>
+
+    <!-- TARGETA 4: Nuxxa -->
+    <div class="tarjeta-audiovisual">
+        <div class="contenedor-video">
+            <video autoplay loop muted playsinline src="video/nuxxa.mp4"></video>
+            <div class="capa-oscura">
+                <span>VEURE PROJECTE</span>
+            </div>
+        </div>
+        <h4>@nuxxa</h4>
+        <p>Narrativa visual contemporània, tendències culturals i creació de formats curts per a TikTok.</p>
+    </div>
+
+</div>
