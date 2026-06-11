@@ -39,3 +39,7 @@
 .dropdown:hover::before {
     display: block;
 }
+/* Reduïm l'espai entre el manifest i els vídeos a la pàgina de Xarxes Socials */
+.animacion-entrada .seccion-manifiesto {
+    margin-bottom: 2.5rem; /* Abans era 6rem (uns 96px), ara queda molt més tancat */
+}
