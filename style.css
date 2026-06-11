@@ -8,7 +8,8 @@ body {
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
-/* RECTÁNGULO SUPERIOR MÁS CORTO (45vh en portada, 30vh en subpáginas) */
+
+/* RECTÁNGULO SUPERIOR MÁS CORTO */
 .hero-artistico {
     position: relative;
     background-color: #1a1a1d;
@@ -20,14 +21,17 @@ body {
     align-items: center;
     padding: 0;
 }
+
 .hero-artistico.subpagina {
-    height: 40vh; /* Mantinc el teu ajust adaptat */
+    height: 40vh;
 }
+
 .hero-centro {
     margin: auto 0;
     text-align: center;
     padding: 0 1rem;
 }
+
 .tagline {
     font-size: 0.85rem;
     font-weight: 600;
@@ -36,6 +40,7 @@ body {
     display: block;
     margin-bottom: 0.5rem;
 }
+
 .hero-artistico h1 {
     font-size: 3.8rem;
     font-weight: 800;
@@ -43,6 +48,7 @@ body {
     margin: 0;
     line-height: 1.1;
 }
+
 .subtitulo {
     font-size: 1rem;
     color: #d1d1d6;
@@ -50,6 +56,7 @@ body {
     letter-spacing: 1px;
     margin-top: 0.8rem;
 }
+
 /* MENÚ INTEGRADO EN LA BASE DEL RECTÁNGULO */
 .navbar-artistica {
     width: 100%;
@@ -57,6 +64,7 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding: 1rem 0;
 }
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -65,6 +73,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .nav-links a {
     text-decoration: none;
     color: #a1a1a6;
@@ -73,17 +82,21 @@ body {
     letter-spacing: 0.5px;
     transition: color 0.3s ease;
 }
+
 .nav-links a:hover, .nav-links a.active {
     color: #ffffff;
 }
+
 .flecha {
     font-size: 0.8rem;
     color: #666;
 }
-/* MENÚ DESPLEGABLE (DROPDOWN) */
+
+/* MENÚ DESPLEGABLE (DROPDOWN) - CORREGIT */
 .dropdown {
     position: relative;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -93,12 +106,14 @@ body {
     border-radius: 8px;
     padding: 0.6rem 0;
     list-style: none;
-    margin-top: 1rem;
+    top: 100%; /* Enganxa el menú just a sota de la paraula Projectes */
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
     border: 1px solid #eee;
+    margin: 0;
 }
+
 .dropdown-content li a {
     color: #333333 !important;
     padding: 0.7rem 1.5rem;
@@ -106,19 +121,36 @@ body {
     font-size: 0.9rem;
     text-align: left;
 }
+
 .dropdown-content li a:hover {
     background-color: #f7f7f9;
     color: #000000 !important;
 }
-.dropdown:hover .dropdown-content {
+
+/* El "pont" invisible per evitar que el menú desaparegui en moure el ratolí */
+.dropdown::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: none;
+    z-index: 99;
+}
+
+.dropdown:hover .dropdown-content, 
+.dropdown:hover::before {
     display: block;
 }
+
 /* SECCIONES EDITORIALES */
 .contenedor-art {
     max-width: 950px;
     margin: 5rem auto;
     padding: 0 2rem;
 }
+
 .numero {
     font-size: 0.75rem;
     font-weight: 700;
@@ -126,9 +158,11 @@ body {
     color: #a1a1a6;
     margin-bottom: 1.5rem;
 }
+
 .seccion-manifiesto {
     margin-bottom: 6rem;
 }
+
 .frase-impacto {
     font-size: 2.2rem;
     font-weight: 500;
@@ -137,6 +171,7 @@ body {
     margin-bottom: 2.5rem;
     color: #111111;
 }
+
 .texto-columna {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -144,12 +179,14 @@ body {
     font-size: 1.05rem;
     color: #444444;
 }
+
 .cuadricula-artistica {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
     margin-top: 2rem;
 }
+
 .caja-imagen-placeholder {
     background-color: #eae9e6;
     height: 350px;
@@ -163,10 +200,12 @@ body {
     font-weight: 600;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 .caja-imagen-placeholder:hover {
     transform: translateY(-4px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.05);
 }
+
 .footer-artistico {
     text-align: center;
     padding: 4rem 2rem;
@@ -176,11 +215,8 @@ body {
     max-width: 950px;
     margin: 0 auto;
 }
-/* ==========================================
-   AFEGITS PER A LA PÀGINA DE XARXES
-   ========================================== */
 
-/* Títols separadors de les 3 seccions */
+/* AFEGITS PER A LA PÀGINA DE XARXES */
 .titulo-subseccion {
     font-size: 1.2rem;
     font-weight: 600;
@@ -192,17 +228,18 @@ body {
     padding-bottom: 0.5rem;
 }
 
-/* Format de les targetes del portfoli de fotos (Subsecció Publicacions) */
 .tarjeta-foto {
     display: flex;
     flex-direction: column;
 }
+
 .info-foto h3, .tarjeta-audiovisual h4 {
     font-size: 1.2rem;
     font-weight: 600;
     margin: 1.2rem 0 0.3rem 0;
     color: #111111;
 }
+
 .info-foto p, .tarjeta-audiovisual p {
     font-size: 0.95rem;
     color: #555555;
@@ -210,17 +247,18 @@ body {
     line-height: 1.5;
 }
 
-/* Graella i vídeos 9:16 (Subsecció Reels) */
 .graella-videos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
 }
+
 .tarjeta-audiovisual {
     display: flex;
     flex-direction: column;
 }
+
 .contenedor-video {
     width: 100%;
     aspect-ratio: 9 / 16;
@@ -231,19 +269,23 @@ body {
     cursor: pointer;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
 }
+
 .contenedor-video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
 }
+
 .contenedor-video:hover {
     transform: translateY(-6px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
 }
+
 .contenedor-video:hover video {
     transform: scale(1.04);
 }
+
 .capa-oscura {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -251,25 +293,28 @@ body {
     display: flex; justify-content: center; align-items: center;
     opacity: 0; transition: opacity 0.3s ease;
 }
+
 .capa-oscura span {
     color: #fff; font-size: 0.9rem; font-weight: 500; letter-spacing: 1px;
     border: 1px solid #fff; padding: 0.6rem 1.2rem; border-radius: 40px;
     transform: translateY(10px); transition: transform 0.4s ease;
 }
+
 .contenedor-video:hover .capa-oscura { opacity: 1; }
 .contenedor-video:hover .capa-oscura span { transform: translateY(0); }
 
-/* Secció Històries d'Instagram */
 .seccion-historias {
     margin-top: 6rem;
     border-top: 1px solid #eae9e6;
     padding-top: 4rem;
 }
+
 .seccion-historias p {
     font-size: 0.95rem;
     color: #555555;
     margin-bottom: 3rem;
 }
+
 .contenedor-historias-flex {
     display: flex;
     gap: 3.5rem;
@@ -277,6 +322,7 @@ body {
     flex-wrap: wrap;
     margin-top: 2rem;
 }
+
 .item-historia {
     display: flex;
     flex-direction: column;
@@ -284,6 +330,7 @@ body {
     gap: 1rem;
     cursor: pointer;
 }
+
 .circulo-historia {
     width: 90px;
     height: 90px;
@@ -293,12 +340,14 @@ body {
     background-color: #fbfbfa;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
 }
+
 .circulo-historia img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
+
 .item-historia span {
     font-size: 0.85rem;
     font-weight: 600;
@@ -306,17 +355,18 @@ body {
     letter-spacing: 0.5px;
     transition: color 0.3s ease;
 }
+
 .item-historia:hover .circulo-historia {
     transform: translateY(-4px) scale(1.03);
     border-color: #1a1a1a;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
+
 .item-historia:hover span {
     color: #666666;
 }
-/* ==========================================
-   MEDIA QUERIES (RESPONSIVE)
-   ========================================== */
+
+/* MEDIA QUERIES (RESPONSIVE) */
 @media (max-width: 768px) {
     .hero-artistico h1 { font-size: 2.8rem; }
     .hero-artistico { height: 35vh; }
@@ -324,13 +374,6 @@ body {
     .cuadricula-artistica { grid-template-columns: 1fr; }
     .graella-videos { grid-template-columns: 1fr; gap: 3rem; }
     .nav-links { gap: 1.5rem; }
-    
-    .contenedor-historias-flex {
-        gap: 2rem;
-        justify-content: center;
-    }
-    .circulo-historia {
-        width: 80px;
-        height: 80px;
-    }
+    .contenedor-historias-flex { gap: 2rem; justify-content: center; }
+    .circulo-historia { width: 80px; height: 80px; }
 }
