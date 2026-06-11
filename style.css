@@ -23,7 +23,7 @@ body {
 }
 
 .hero-artistico.subpagina {
-    height: 30vh; /* Encara més estilitzat per a les subpàgines */
+    height: 30vh; /* Estilitzat per a les subpàgines */
 }
 
 .hero-centro {
@@ -92,7 +92,7 @@ body {
     color: #666;
 }
 
-/* MENÚ DESPLEGABLE (DROPDOWN) */
+/* MENÚ DESPLEGABLE (DROPDOWN) - Arreglat perquè no es tanqui */
 .dropdown {
     position: relative;
 }
@@ -106,7 +106,7 @@ body {
     border-radius: 8px;
     padding: 0.6rem 0;
     list-style: none;
-    margin-top: 1rem;
+    top: 100%; /* S'alinea just on acaba el text superior */
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
@@ -202,13 +202,11 @@ body {
     margin: 0 auto;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .hero-artistico h1 { font-size: 2.8rem; }
     .hero-artistico { height: 35vh; }
     .texto-columna { grid-template-columns: 1fr; gap: 1.5rem; }
     .cuadricula-artistica { grid-template-columns: 1fr; }
     .nav-links { gap: 1.5rem; }
-}
-.hero-artistico.subpagina {
-    height: 40vh; /* Fa que el bloc sigui més estilitzat a les subpàgines */
 }
