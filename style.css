@@ -209,3 +209,6 @@ body {
     .cuadricula-artistica { grid-template-columns: 1fr; }
     .nav-links { gap: 1.5rem; }
 }
+.hero-artistico.subpagina {
+    height: 40vh; /* Fa que el bloc sigui més estilitzat a les subpàgines */
+}
