@@ -1,52 +1,86 @@
-<div class="graella-videos">
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo | Irina Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- TARGETA 1: Llevataps Sabadell -->
-    <div class="tarjeta-audiovisual">
-        <div class="contenedor-video">
-            <video autoplay loop muted playsinline src="video/llevataps.mp4"></video>
-            <div class="capa-oscura">
-                <span>VEURE PROJECTE</span>
-            </div>
+    <!-- CAPÇALERA ARTÍSTICA -->
+    <header class="hero-artistico subpagina">
+        <div class="hero-centro">
+            <span class="tagline">PORTFOLIO CREATIU</span>
+            <h1>VÍDEO</h1>
+            <p class="subtitulo">Producció audiovisual i peces cinematogràfiques</p>
         </div>
-        <h4>@llevataps_sabadell</h4>
-        <p>Creació de contingut gastronòmic, fotografia de producte i gestió de comunitat.</p>
-    </div>
+        <nav class="navbar-artistica">
+            <ul class="nav-links">
+                <li><a href="index.html">Inici</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn active">Projectes <span class="flecha">▾</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="fotografia.html">Fotografia</a></li>
+                        <li><a href="xarxes-socials.html">Xarxes Socials</a></li>
+                        <li><a href="video.html">Vídeo</a></li>
+                        <li><a href="disseny-grafic.html">Disseny Gràfic</a></li>
+                    </ul>
+                </li>
+                <li><a href="sobre-mi.html">Sobre mi</a></li>
+                <li><a href="serveis.html">Serveis</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- TARGETA 2: Activatt -->
-    <div class="tarjeta-audiovisual">
-        <div class="contenedor-video">
-            <video autoplay loop muted playsinline src="video/activatt.mp4"></video>
-            <div class="capa-oscura">
-                <span>VEURE PROJECTE</span>
+    <!-- SECCIÓ PRINCIPAL AUDIOVISUAL -->
+    <main class="contenedor-art animacion-entrada">
+        <section class="seccion-galeria">
+            <p class="numero">04 / PRODUCCIÓ AUDIOVISUAL</p>
+            <h2 class="frase-impacto">«Narratives en moviment i direcció de fotografia»</h2>
+            
+            <div class="cuadricula-artistica">
+                
+                <!-- PROJECTE 1: Curtmetratge / TFG (Format Horitzontal) -->
+                <div class="tarjeta-foto">
+                    <!-- Hem fet servir la caixa de video amb ràtio 4:3 o 16:9 de la teva portada -->
+                    <div class="caja-imagen-placeholder video-tfg">
+                        <span class="icono-play">▶</span>
+                        <span>VEURE PEÇA</span>
+                    </div>
+                    <div class="info-foto">
+                        <p class="tag-proyecto">Treball Final de Grau</p>
+                        <h3>Projecte Audiovisual Narratiu</h3>
+                        <p>Direcció de fotografia, muntatge i etalonatge de color per a curtmetratge de ficció.</p>
+                        <!-- Pots canviar aquest enllaç pel teu vídeo real de YouTube o Vimeo si vols -->
+                        <a href="https://youtube.com" target="_blank" class="enllaç-youtube">Obrir a YouTube ↗</a>
+                    </div>
+                </div>
+
+                <!-- PROJECTE 2: Clip Comercial -->
+                <div class="tarjeta-foto">
+                    <div class="caja-imagen-placeholder video-tfg">
+                        <span class="icono-play">▶</span>
+                        <span>PLAYBACK</span>
+                    </div>
+                    <div class="info-foto">
+                        <p class="tag-proyecto">Publicitat / Corporatiu</p>
+                        <h3>Fashion Film & Branding</h3>
+                        <p>Peces audiovisuals de curta durada enfocades a transmetre la identitat visual d'una marca de moda.</p>
+                    </div>
+                </div>
+
             </div>
-        </div>
-        <h4>@activatt_</h4>
-        <p>Estratègia digital, vídeos dinàmics d'entrenament i disseny de publicacions d'alt impacte.</p>
-    </div>
+        </section>
+    </main>
 
-    <!-- TARGETA 3: Kareba Travel -->
-    <div class="tarjeta-audiovisual">
-        <div class="contenedor-video">
-            <!-- Recorda comprovar si el fitxer es diu kareba.mp4 o kareba-travel.mp4 al teu ordinador -->
-            <video autoplay loop muted playsinline src="video/kareba.mp4"></video>
-            <div class="capa-oscura">
-                <span>VEURE PROJECTE</span>
-            </div>
-        </div>
-        <h4>@kareba.travel</h4>
-        <p>Creació de contingut de viatges, format narratiu i gestió de comunitat.</p>
-    </div>
+    <!-- PEU DE PÀGINA -->
+    <footer class="footer-artistico">
+        <p>&copy; 2026 Irina Garcia. Tots els drets reservats.</p>
+    </footer>
 
-    <!-- TARGETA 4: Nuxxa -->
-    <div class="tarjeta-audiovisual">
-        <div class="contenedor-video">
-            <video autoplay loop muted playsinline src="video/nuxxa.mp4"></video>
-            <div class="capa-oscura">
-                <span>VEURE PROJECTE</span>
-            </div>
-        </div>
-        <h4>@nuxxa</h4>
-        <p>Narrativa visual contemporània, tendències culturals i creació de formats curts per a TikTok.</p>
-    </div>
-
-</div>
+</body>
+</html>
